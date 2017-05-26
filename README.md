@@ -141,7 +141,7 @@ exponential moving averages. And obviously the *Simple Moving Averages* page for
 moving averages.
 
 
-## Improvements
+## Todo
 
 The European Central Bank doesn't provide the *UAH* currency. If you can find it somewhere, feel free to add it.
 
