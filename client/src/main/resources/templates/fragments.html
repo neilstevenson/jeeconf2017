@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+<title th:text="${@environment.getProperty('spring.application.name')}">?</title>
+<link rel="stylesheet" media="screen" type="text/css"
+	th:href="@{/css/main.css}" />
+</head>
+
+<body th:fragment="header">
+	<div class="headerfooter" style="text-align: left;">
+		<div style="float: right;">
+			<form name="menu" th:action="@{/}">
+				<input class="mySubmit" type="submit" value="Menu" />
+			</form>
+		</div>
+	</div>
+</body>
+
+<body th:fragment="footer">
+	<div class="headerfooter">
+		<p th:text="'&copy; Hazelcast ' + ${#dates.year(#dates.createNow())}" />
+	</div>
+</body>
+
+</html>

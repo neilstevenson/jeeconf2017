@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: head" />
+
+<body>
+	<div th:include="fragments :: header">?</div>
+
+	<div class="mainpane">
+
+		<h1>Main Menu</h1>
+
+		<h2>Currencies</h2>
+
+		<table style="border-style: ridge;">
+			<tr>
+				<td>
+					<form name="select" th:action="@{/currency/list}">
+						<input class="mySubmit" type="submit" value="List Currencies" />
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>
+					<form name="select" th:action="@{/currency/load}">
+						<input class="mySubmit" type="submit" value="Load Currencies" />
+					</form>
+				</td>
+			</tr>
+		</table>
+
+		<h2>Averages</h2>
+
+		<table style="border-style: ridge;">
+			<tr>
+				<td>
+					<form name="select" th:action="@{/average/start}">
+						<input class="mySubmit" type="submit" value="Calculate Averages" />
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form name="select" th:action="@{/average/exponential}">
+						<input class="mySubmit" type="submit"
+							value="Exponential Moving Averages" />
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form name="select" th:action="@{/average/simple}">
+						<input class="mySubmit" type="submit"
+							value="Simple Moving Averages" />
+					</form>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<div th:include="fragments :: footer">?</div>
+</body>
+
+</html>

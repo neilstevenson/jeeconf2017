@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: "JEEConf 2017 @project.artifactId@"

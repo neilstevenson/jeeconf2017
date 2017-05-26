@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: head" />
+
+<body>
+	<div th:include="fragments :: header">?</div>
+
+	<div class="mainpane">
+
+		<h1>CURRENCY</h1>
+
+		<div th:if="${#lists.isEmpty(data)}">
+			<h2>No currency data available</h2>
+		</div>
+
+		<div th:if="${not #lists.isEmpty(data)}">
+
+			<table class="myData">
+				<tr>
+					<th th:each="column : ${columns}" th:text="${column}" />
+				</tr>
+
+				<tr th:each="datum,stat : ${data}">
+					<td th:each="field : ${datum}" th:text="${field.value}" />
+				</tr>
+			</table>
+
+		</div>
+
+	</div>
+
+	<div th:include="fragments :: footer">?</div>
+</body>
+
+</html>

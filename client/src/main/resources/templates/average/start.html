@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: head" />
+
+<body>
+	<div th:include="fragments :: header">?</div>
+
+	<div class="mainpane">
+
+		<h1>Moving Average Analysis</h1>
+
+		<!--/* First page render, show form */-->
+		<div th:if="${j_last == null}">
+			<form name="start" method="GET" th:action="@{/average/start}">
+				<input type="hidden" name="j_last" th:value="10" />
+				<button class="mySubmit" type="submit">Run</button>
+			</form>
+		</div>
+
+		<!--/* Second page render, show result */-->
+		<div th:unless="${j_last == null}">
+			<div class="serviceInfo">
+				<h2 th:text="${'Ran averages for last ' + j_last + ' values.'}">?</h2>
+				<div th:if="${j_elapsed == null}" class="serviceNotAvailable">
+					<P>Elapsed time zero, check job log</P>
+				</div>
+				<p th:text="${'Elapsed time ' + j_elapsed}">?</p>
+			</div>
+
+			<form name="start" method="GET" th:action="@{/average/start}">
+				<input type="hidden" name="j_last" th:value="${j_last}" />
+				<button class="mySubmit" type="submit">ReRun</button>
+			</form>
+		</div>
+
+	</div>
+
+	<div th:include="fragments :: footer">?</div>
+</body>
+
+</html>
