@@ -141,9 +141,11 @@ exponential moving averages. And obviously the *Simple Moving Averages* page for
 moving averages.
 
 ## Todo
+
 The European Central Bank doesn't provide the *UAH* currency. If you can find it somewhere, feel free to add it.
 
 ## Background
+
 The Hazelcast Jet website, [http://jet.hazelcast.org/](http://jet.hazelcast.org/)
 
 The Hazelcast IMD website, [http://imdg.hazelcast.org/](http://imdg.hazelcast.org/)
