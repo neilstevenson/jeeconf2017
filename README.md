@@ -140,6 +140,7 @@ On the client GUI, use the *Exponential Moving Averages* page from the front men
 exponential moving averages. And obviously the *Simple Moving Averages* page for the calculated simple
 moving averages.
 
+
 ## Improvements
 
 The European Central Bank doesn't provide the *UAH* currency. If you can find it somewhere, feel free to add it.
